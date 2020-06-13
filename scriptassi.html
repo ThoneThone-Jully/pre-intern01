@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #hh{
+            color: red;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            document.querySelectorAll('.color_change').forEach(function(option){
+                option.onclick=function(){
+                    document.querySelector('#hh').style.color=option.dataset.color;
+                };
+            });
+        });
+    </script>
+</head>
+<body>
+   <h1 id="hh">Hello!Welcome to Our PreIntern Group.</h1>
+   <select>
+       <option class="color_change" data_color="black">Black</option>
+       <option class="color_change" data_color="red">Red</option>
+       <option class="color_change" data_color="blue">Blue</option>
+       <option class="color_change" data_color="green">Green</option>
+   </select>
+    
+</body>
+</html>
