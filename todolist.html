@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.querySelector('#todo-list').onsubmit=()=>{
+                const li=document.createElement('li');
+                li.innerHTML=document.querySelector('#task').value;
+                document.querySelector('#list').append(li);
+                document.querySelector('#task').value='';
+                return false;
+            };
+        });
+    </script>
+</head>
+
+<body>
+    <h1>To DO List</h1>
+    <ul id="list"></ul>
+    <form id="todo-list">
+        <input id="task" autocomplete="off" autofocus placeholder="Add todo-task" type="text">
+        <input type="submit">
+    </form>
+</body>
+
+</html> 
